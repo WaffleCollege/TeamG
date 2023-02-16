@@ -2,7 +2,7 @@
 let express = require("express");
 let app = express();
 //html,cssファイルを読み込む
-app.use("/", express.static("ここにhtml，cssファイルが入っているファイル名を書く"));
+app.use("/", express.static("event"));
 app.use("/",(req,res) => {
 })
 
