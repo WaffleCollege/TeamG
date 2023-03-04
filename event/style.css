@@ -226,3 +226,63 @@ label{
     background-color: #000000;
     border: 2px solid rgb(33, 150, 243);
 }
+
+.signIn{
+  font-family: 'Maven Pro', sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+form{
+  width: 40%;
+  margin-left: 30%;
+  padding-top: 10%;
+}
+
+
+input{
+  width: 100%;
+  background: transparent;
+  border-bottom: solid 1px #808080;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 1rem;
+  padding: 0.5em 0.4em;
+  transition: all 0.4s;
+  color: #808080;
+  margin: 0.7rem 0;
+}
+
+
+button{
+  background: transparent;
+  width: 50%;
+  margin-top: 2.5rem;
+  font-size: 1rem;
+  border: solid 1px #808080;
+  padding: 1em 0;
+  color: #000000;
+  transition: all 0.6s;
+  margin-left: 120px;
+}
+
+button:hover {
+  cursor:pointer;
+  background: #808080;
+}
+
+@media (max-width: 550px) {
+  form {
+  width: 90%;
+  margin-left: 3%;
+  padding-top:  5%;
+}
+  input {
+    font-size: 1em;
+  }
+}

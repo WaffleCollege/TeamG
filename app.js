@@ -2,6 +2,8 @@
 let express = require("express");
 let app = express();
 
+// app.set('view engine', 'ejs');
+
 //html,cssファイルを読み込む
 //イベント作成画面
 app.use("/create/event", express.static("event"));
@@ -15,5 +17,5 @@ app.use("/event/information", (req,res) => {
 
 //port番号
 app.listen(3000, () => {
-    console.log("Start Server!");
-})
+    console.log("listening at http://localhost:3000");
+  });

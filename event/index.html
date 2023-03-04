@@ -42,6 +42,7 @@
       
       <div class="tab_content" id="tab_3_content">
         <div>
+          <form method="POST">
           出発地
           <input type="text" name="" value="" class="m-form-text" />
           目的地
@@ -59,6 +60,7 @@
             </select>
           </div>
           <input type="submit" name="" value="送信" class="form-submit-button" />
+          </form>
         </div>
       </div>
       
@@ -67,7 +69,19 @@
       </div>
       
       <div class="tab_content" id="tab_5_content">
-        タブ５の内容がここに入ります
+        <form method="post" action="login.html">
+          <p>名前</p>
+          <input type="text" placeholder="田中　花子"　class="signIn">
+          <p>メールアドレス</p>
+          <input type="text" class="signIn">
+          <p>パスワード</p>
+          <input type="password" maxlength="20" class="signIn">
+          <p>パスワード再入力</p>
+          <input type="password" maxlength="20" class="signIn">
+          <p>ニックネーム</p>
+          <input type="text" placeholder="hana" class="signIn">
+          <button type="submit" value="送信">送信</button>
+        </form>
       </div>
       
     </div>
@@ -76,3 +90,4 @@
 </body>
 </html>
 
+ 
