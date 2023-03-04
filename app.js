@@ -15,5 +15,5 @@ app.use("/event/information", (req,res) => {
 
 //port番号
 app.listen(3000, () => {
-    console.log("Start Server!");
-})
+    console.log("listening at http://localhost:3000");
+  });
