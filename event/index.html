@@ -42,22 +42,23 @@
       
       <div class="tab_content" id="tab_3_content">
         <div>
-          <form method="POST">
+          <form action="/createEvent/" method="post">
           出発地
-          <input type="text" name="" value="" class="m-form-text" />
+          <input type="text" name="depature" value="" class="m-form-text" />
           目的地
-          <input type="text" name="" value="" class="m-form-text"/>
+          <input type="text" name="destination" value="" class="m-form-text"/>
           出発日時
-          <input type="date" name="" value="" class="m-form-text"/>
+          <input type="date" name="date" value="" class="m-form-text"/>
           出発時刻
-          <input type="time" name="" value="" class="m-form-text"/>
+          <input type="time" name="time" value="" class="m-form-text"/>
           集めたい人数
-          <div class="m-form-select">
+          <input type="number" name="numberOfPeople" value="1" min="1" max="4" step="1"/>
+          <!-- <div class="m-form-select">
             <select>
               <option>1人</option>
               <option>2人</option>
               <option>3人</option>
-            </select>
+            </select> -->
           </div>
           <input type="submit" name="" value="送信" class="form-submit-button" />
           </form>
