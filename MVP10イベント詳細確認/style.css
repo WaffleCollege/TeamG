@@ -1,0 +1,251 @@
+
+/*
+////////////////////////////////////////
+reset.css を読み込んで全てのスタイルをなくす
+////////////////////////////////////////
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+////////////////////////////////////////
+reset.css では足りない初期化を追加
+////////////////////////////////////////
+*/
+
+/* 全てに box-sizing: border-box; を適用 */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* 画像に関する初期設定 */
+img {
+  /* 大きい画像がはみ出さない */
+  max-width: 75%;
+  /* 画像周りの無駄なスペースができない */
+  /* vertical-align: bottom; */
+}
+
+[data-whatinput="mouse"] *:focus,
+[data-whatinput="touch"] *:focus {
+  outline: none;
+}
+
+body {
+  font-family:'游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'メイリオ';
+}
+
+
+/*
+////////////////////////////////////////
+初期設定
+////////////////////////////////////////
+*/
+
+body {
+  padding: 35px 10px;
+  color: #56564f;
+  background-color: #a9a9a9;
+}
+
+article {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  background-color:#FAFAFA;
+}
+
+
+section {
+  font-weight: 550;
+  padding: 15px 30px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  /* border-bottom:solid 1px #a9a9a9; */
+  /* margin-bottom: 10px; */
+  padding: 5px 0px;
+}
+
+/* ---以下セクション別--- */
+
+.header button{
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  /* border-radius:50%; */
+  margin-right:15px;
+  margin-bottom:15px;
+  opacity: .6;
+  background:none;/*背景色*/
+  color: #333;/*マークの色*/
+  border: 1px solid;/*外枠の線*/
+  text-align: center;
+}
+
+
+.from-to p{
+  border-left: 3px #56564f dotted;
+  color: transparent;
+  margin-left:8.5px;
+}
+
+
+
+.item-list {
+  display: flex;
+  justify-content: center;
+  /* margin: 10px 0px; */
+  padding :10px 50px;
+}
+
+.items {
+  padding: 5px;
+  border:solid 1px #a9a9a9;
+  width :30%;
+  margin: 10px;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.detail {
+  text-align: center;
+  justify-content: center;
+  
+}
+
+.check-button {
+  text-align: center;
+}
+
+.check-button button {
+  background: #313131;
+  /* border-radius: 50px; */
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 260px;
+  padding: 10px 25px;
+  color: #eee;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.check-button button:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border-radius: 1px;
+  transition: 0.2s ease-in-out;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  transform: translateY(-50%);
+}
+
+/* .check-button button:hover {
+  background: #eee;
+  color: #313131;
+} */
+
+
+/* ---レスポンシブル対応 font-sizeはこれから指定--- */
+/* タブレット向けレイアウト */
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 100%;
+  }
+  
+  .form-action {
+  width: 100%;
+  height: 20px;
+  text-align: center; 
+  }
+  
+  body {
+    background-color:#FAFAFA;
+  }
+}
+
+/* スマホ向けレイアウト */
+@media(max-width: 670px){
+  .wrapper {
+    width: 100%;
+  }
+  .info-items-img {
+  padding: 60px 5px;
+  }
+  
+  .form-items-item label {
+  width: 100px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 7px;
+  float: left;
+  text-align: end;
+  }
+  
+  .form-action {
+  width: 100%;
+  height: 20px;
+  text-align: center; 
+  }
+  
+  body {
+    background-color:#FAFAFA;
+  }
+}
