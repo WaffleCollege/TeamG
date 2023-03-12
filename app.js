@@ -35,7 +35,7 @@ var pool = new pg.Pool({
 
 //html,cssファイルを読み込む
 //イベント作成画面
-app.use("/create/event", express.static("event"));
+app.use("/create/event", express.static("MVP9イベント作成"));
 app.use("/create/event",(req,res) => {
 })
 
@@ -43,6 +43,15 @@ app.use("/create/event",(req,res) => {
 app.use("/event/information", express.static("event_detail_info"));
 app.use("/event/information", (req,res) => {
 })
+
+// //イベント情報表示して確認する画面
+// // app.use("/confirm/event/information/", express.static("MVP10イベント詳細確認"));
+// app.get('/confirm/event/informations/', (req,res) => {
+//   console.log("ここだよ！");
+//   res.render('mvp9_createEvent_info');
+//   console.log("ここだよ！");
+// });
+
 
 app.post("/createEvent/", (req,res,next) => {
   console.log(req.body);
@@ -70,6 +79,34 @@ app.post("/createEvent/", (req,res,next) => {
     }
   });
 });
+
+//mvp9_createEvent_info.ejsで表示させるPostgresのDBからデータをとってくる
+app.get('/confirm/event/information/', (req, res, next) => {
+  // データベースからデータを読み込む
+  pool.connect((err, client) => {
+    if (err) {
+      console.log(err);
+    } else {
+      // query関数の第一引数にSQL文をかく
+      console.log("ここだよ！");
+      client.query("SELECT destination FROM events", (err, result) => {
+       console.log(result.rows[0].destination);
+               res.render("mvp9_createEvent_info", {
+          // departure: result.rows[0].departure,
+          destination: result.rows[0].destination,
+          date: result.rows[0].date,
+          numberOfPeople: result.rows[0].numberofpeople,
+          time: result.rows[0].time
+
+        });
+
+        //コンソール上での確認用
+        console.log(result);
+      });
+    }
+  });
+});
+
 
 //port番号
 app.listen(3030, function(err) {
