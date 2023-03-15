@@ -1,0 +1,231 @@
+
+/*
+////////////////////////////////////////
+reset.css を読み込んで全てのスタイルをなくす
+////////////////////////////////////////
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+////////////////////////////////////////
+reset.css では足りない初期化を追加
+////////////////////////////////////////
+*/
+
+/* 全てに box-sizing: border-box; を適用 */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* 画像に関する初期設定 */
+img {
+  /* 大きい画像がはみ出さない */
+  max-width: 75%;
+  /* 画像周りの無駄なスペースができない */
+  /* vertical-align: bottom; */
+}
+
+[data-whatinput="mouse"] *:focus,
+[data-whatinput="touch"] *:focus {
+  outline: none;
+}
+
+body {
+  font-family:'游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', 'メイリオ';
+}
+
+
+/*
+////////////////////////////////////////
+初期設定
+////////////////////////////////////////
+*/
+
+body {
+  padding: 35px 10px;
+  color: #56564f;
+  background-color: #a9a9a9;
+}
+
+article {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  background-color:#FAFAFA;
+}
+
+
+section {
+  font-weight: 550;
+  padding: 15px 30px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  /* border-bottom:solid 1px #a9a9a9; */
+  /* margin-bottom: 10px; */
+  padding: 5px 0px;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: bold;
+  /* padding: 5px 0px; */
+}
+
+/* ---以下セクション別--- */
+
+.title {
+  text-align: center;
+}
+
+
+.event-list {
+  text-align: center;
+  
+  width: 85%;
+  margin: 0 auto;
+
+}
+
+.elements {
+  position:relative;
+  border:solid 1px #a9a9a9;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+
+.elements .link{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.figure {
+  display: flex;
+  justify-content: center;
+  /* margin: 10px 0px; */
+  padding :10px 0px;
+  
+}
+
+
+
+.parts {
+  width :30%;
+  /* border:solid 1px #a9a9a9; */
+  display: grid;
+  place-items: center;
+  background-color: #8fe968;
+  border-radius: 15%;
+}
+
+.figure :nth-of-type(2) {
+  border: none;
+  background-color: transparent;
+  /* width: 20%; */
+}
+
+/* ---レスポンシブル対応 font-sizeはこれから指定--- */
+/* タブレット向けレイアウト */
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 100%;
+  }
+  
+  .form-action {
+  width: 100%;
+  height: 20px;
+  text-align: center; 
+  }
+  
+  body {
+    background-color:#FAFAFA;
+  }
+}
+
+/* スマホ向けレイアウト */
+@media(max-width: 670px){
+  .wrapper {
+    width: 100%;
+  }
+  .info-items-img {
+  padding: 60px 5px;
+  }
+  
+  .form-items-item label {
+  width: 100px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 7px;
+  float: left;
+  text-align: end;
+  }
+  
+  .form-action {
+  width: 100%;
+  height: 20px;
+  text-align: center; 
+  }
+  
+  body {
+    background-color:#FAFAFA;
+  }
+}
