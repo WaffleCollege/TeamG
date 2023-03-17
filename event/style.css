@@ -137,11 +137,9 @@ input[name="tab_item"] {
   overflow: hidden;
 }
 
-#tab_1:checked ~ #tab_1_content,
+
 #tab_2:checked ~ #tab_2_content,
-#tab_3:checked ~ #tab_3_content,
-#tab_4:checked ~ #tab_4_content,
-#tab_5:checked ~ #tab_5_content{
+#tab_3:checked ~ #tab_3_content{
   display: block;
 }
 
@@ -210,31 +208,6 @@ label{
     outline: 0;
     box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
 }
-
-.form-submit-button {
-    display: inline-block;
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    background-color: #333333;
-    color: #ffffff;
-    font-weight: bold;
-    appearance: none;
-    cursor: pointer;
-    border: 2px solid transparent;
-    margin-top: 40px;
-}
-
-.form-submit-button:hover {
-    background-color: #000000;
-}
-
-.form-submit-button:focus {
-    outline: 0;
-    background-color: #000000;
-    border: 2px solid rgb(33, 150, 243);
-}  
 
 .signIn{
   font-family: 'Maven Pro', sans-serif;

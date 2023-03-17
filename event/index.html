@@ -21,26 +21,15 @@
     </div>
     
     <div class="box box-nav">
-      <input id="tab_1" type="radio" name="tab_item" checked>
-      <label class="tab_item" for="tab_1">My Plans</label>
+      
       <input id="tab_2" type="radio" name="tab_item">
-      <label class="tab_item" for="tab_2">Search</label>
+      <label class="tab_item" for="tab_2">Make Events</label>
       <input id="tab_3" type="radio" name="tab_item">
-      <label class="tab_item" for="tab_3">Make Events</label>
-      <input id="tab_4" type="radio" name="tab_item">
-      <label class="tab_item" for="tab_4">Contact</label>
-      <input id="tab_5" type="radio" name="tab_item">
-      <label class="tab_item" for="tab_5">Sign In</label>
-
-      <div class="tab_content" id="tab_1_content">
-        タブ1の内容がここに入ります
-      </div>
+      <label class="tab_item" for="tab_3">Log In</label>
+      
+      
       
       <div class="tab_content" id="tab_2_content">
-        タブ2の内容がここに入ります
-      </div>
-      
-      <div class="tab_content" id="tab_3_content">
         <div>
           出発地
           <input type="text" name="" value="" class="m-form-text" />
@@ -58,26 +47,16 @@
               <option>3人</option>
             </select>
           </div>
-          <input type="submit" name="" value="送信" class="form-submit-button" />
+          <button type="submit" value="送信" >送信</button>
         </div>
       </div>
       
-      <div class="tab_content" id="tab_4_content">
-        タブ４の内容がここに入ります
-      </div>
-      
-      <div class="tab_content" id="tab_5_content">
+      <div class="tab_content" id="tab_3_content">
         <form method="post" action="login.html">
-          <p>名前</p>
-          <input type="text" placeholder="田中　花子"　class="signIn">
           <p>メールアドレス</p>
           <input type="text" class="signIn">
           <p>パスワード</p>
           <input type="password" maxlength="20" class="signIn">
-          <p>パスワード再入力</p>
-          <input type="password" maxlength="20" class="signIn">
-          <p>ニックネーム</p>
-          <input type="text" placeholder="hana" class="signIn">
           <button type="submit" value="送信">送信</button>
         </form>
       </div>
