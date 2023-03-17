@@ -4,17 +4,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- iconはあとで追加 -->
-    <!-- <link rel="icon" href="" /> -->
-
+   
+    
     <title>Team G</title>
-    <link rel="stylesheet" href="style.css" /> 
-    <!-- 11行目変更したので、css読み込まれました -->
-    <!-- とりあえず、jsファイルはいらないのでコメントアウトしました -->
-    <!-- <script src="/script.js" defer></script> -->
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
   </head>
   
-<body>
+  <body>
     <div class="box box-logo">
       <img class="logo-img" src="https://cdn.glitch.global/8c2d1ce8-9025-4cdd-b45d-7c962583b995/Brand_initial_Simple_Logo.jpg?v=1676426467813" />
     </div>
@@ -24,74 +21,48 @@
     </div>
     
     <div class="box box-nav">
-      <input id="tab_1" type="radio" name="tab_item" checked>
-      <label class="tab_item" for="tab_1">Home</label>
+      
       <input id="tab_2" type="radio" name="tab_item">
-      <label class="tab_item" for="tab_2">My Plans</label>
+      <label class="tab_item" for="tab_2">Make Events</label>
       <input id="tab_3" type="radio" name="tab_item">
-      <label class="tab_item" for="tab_3">Make Events</label>
-      <input id="tab_4" type="radio" name="tab_item">
-      <label class="tab_item" for="tab_4">Search</label>
-      <input id="tab_5" type="radio" name="tab_item">
-      <lable class="tab_item" for="tab_5">Contacts</lable>
-
-      <div class="tab_content" id="tab_1_content">
-        タブ1の内容がここに入ります
-      </div>
+      <label class="tab_item" for="tab_3">Log In</label>
+      
+      
       
       <div class="tab_content" id="tab_2_content">
-        タブ2の内容がここに入ります
-      </div>
-      
-      <div class="tab_content" id="tab_3_content">
         <div>
-          <form action="/createEvent/" method="post">
           出発地
-          <input type="text" name="departure" value="" class="m-form-text" />
+          <input type="text" name="" value="" class="m-form-text" />
           目的地
-          <input type="text" name="destination" value="" class="m-form-text"/>
+          <input type="text" name="" value="" class="m-form-text"/>
           出発日時
-          <input type="date" name="date" value="" class="m-form-text"/>
+          <input type="date" name="" value="" class="m-form-text"/>
           出発時刻
-          <input type="time" name="time" value="" class="m-form-text"/>
+          <input type="time" name="" value="" class="m-form-text"/>
           集めたい人数
-          <input type="number" name="numberOfPeople" value="1" min="1" max="4" step="1"/>
-          <!-- <div class="m-form-select">
+          <div class="m-form-select">
             <select>
               <option>1人</option>
               <option>2人</option>
               <option>3人</option>
-            </select> -->
+            </select>
           </div>
-          <input type="submit" name="" value="送信" class="form-submit-button" />
-          </form>
+          <button type="submit" value="送信" >送信</button>
         </div>
       </div>
       
-      <div class="tab_content" id="tab_4_content">
-        タブ４の内容がここに入ります
-      </div>
-      
-      <div class="tab_content" id="tab_5_content">
+      <div class="tab_content" id="tab_3_content">
         <form method="post" action="login.html">
-          <p>名前</p>
-          <input type="text" placeholder="田中　花子"　class="signIn">
           <p>メールアドレス</p>
           <input type="text" class="signIn">
           <p>パスワード</p>
           <input type="password" maxlength="20" class="signIn">
-          <p>パスワード再入力</p>
-          <input type="password" maxlength="20" class="signIn">
-          <p>ニックネーム</p>
-          <input type="text" placeholder="hana" class="signIn">
           <button type="submit" value="送信">送信</button>
         </form>
       </div>
-      
-    </div>
-    </div>
 
+    </div> 
+    
 </body>
 </html>
-
- 
+  　　          
